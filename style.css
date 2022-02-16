@@ -1,0 +1,123 @@
+:root {
+    /* color */
+    --bg-color: #151516;
+    --tx-color: rgb(202, 199, 199);
+
+    /* size */
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--tx-color);
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container .card {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.container .profile {
+    border-radius: 20px;
+    height: auto;
+    width: 300px;
+    min-height: 100px;
+    background: linear-gradient(0deg, #1b1b1b 75%, #ff0000 40%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+}
+
+.container .profile .img {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px;
+}
+
+.container .profile .img img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.container .profile .content {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.container .profile div {
+    display: flex;
+}
+
+.container .profile div .code {
+    display: flex;
+    width: auto;
+    padding: 5px;
+    height: auto;
+    background: rgba(3, 3, 3, 0.192);
+    flex-direction: column;
+}
+
+.container .profile .languge {
+    margin: 20px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .profile .languge div {
+    display: flex;
+    width: 100%;
+}
+
+.container .profile .languge div p {
+    width:
+}
+
+.container .profile .languge div span {
+    margin-bottom: 34px;
+    display: block;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    height: 18px;
+    background: rgb(40, 46, 32);
+}
+
+.container .profile .languge div span div {
+    width: 0%;
+    height: 100%;
+    background: #020855;
+    
+}
+
+.container .profile .languge div span div span {
+    background: #020855;
+    margin-left: 0%;
+    height: 100%;
+    /* color: #ff0101; */
+    font-weight: 1000;
+}
