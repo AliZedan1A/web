@@ -1,17 +1,28 @@
 :root {
     /* color */
     --bg-color: #151516;
-    --tx-color: rgb(202, 199, 199);
+    --tx-color: #cac7c7;
+
+    --profile-color: linear-gradient(0deg, #1b1b1b 85%, #550202 40%);
 
     /* size */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    color: var(--tx-color);
 }
 
 body {
     background: var(--bg-color);
     color: var(--tx-color);
-
-    padding: 0;
-    margin: 0;
+    
     box-sizing: border-box;
 }
 
@@ -25,7 +36,7 @@ body {
     justify-content: center;
 }
 
-.container .card {
+.container .card  {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -35,19 +46,23 @@ body {
     align-items: center;
 }
 
-.container .profile {
+.container .card .text h1 {
+    padding: 20px;
+}
+
+.container .card .profile {
     border-radius: 20px;
     height: auto;
-    width: 300px;
+    width: 400px;
     min-height: 100px;
-    background: linear-gradient(0deg, #1b1b1b 75%, #ff0000 40%);
+    background: var(--profile-color);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     padding: 10px 20px;
 }
 
-.container .profile .img {
+.container .card .profile .img {
     width: 100%;
     height: 30%;
     display: flex;
@@ -55,69 +70,141 @@ body {
     margin: 10px 0 20px;
 }
 
-.container .profile .img img {
+.container .card .profile .img img {
     border-radius: 50%;
     width: 150px;
 }
 
-.container .profile .content {
+.container .card .profile .content {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     flex-wrap: nowrap;
 }
 
-.container .profile div {
+.container .card .profile .content .user {
+    font-size: 25px;
+    margin-left: 20px;
+    margin: 0 auto 20px;
+}
+
+
+.container .card .profile .content .skils .dev {
     display: flex;
 }
 
-.container .profile div .code {
+.container .card .profile .content .dev .langugeName {
+    margin-bottom: 20px;;
+    text-align: center;
     display: flex;
     width: auto;
+    padding: 0 5px;
+    height: auto;
+    background: rgba(3, 3, 3, 0.288);
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.container .card .profile .content .dev .langugeName div {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.container .card .profile .content .dev .langugeName div:hover > span {
+    display: flex;
+}
+
+.container .card .profile .content .dev .langugeName div span {
+    flex-direction: column;
+    margin-left: 40px;
+    display: none;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    position: absolute;
+    border-radius: 0 20px 20px;
+    background-color: #7e7979c4;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container .card .profile .content .dev .langugeName div span h1 {
+    color: #000000;
+    font-size: 19px;
+    margin-right: 5px;
+}
+
+
+.container .card .profile .content .dev .langugeName div span p {
+    background-color: rgb(34, 34, 34);
+    border-radius: 5px;
     padding: 5px;
-    height: auto;
-    background: rgba(3, 3, 3, 0.192);
-    flex-direction: column;
+    color: #fff;
+    font-weight: 0;
+    margin: 10px 5px;
+    font-size: 13px
 }
 
-.container .profile .languge {
-    margin: 20px 0;
+.container .card .profile .content .dev .languge {
+    margin: 24px 0;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
 }
 
-.container .profile .languge div {
+.container .card .profile .content .dev .languge div {
     display: flex;
     width: 100%;
+
 }
 
-.container .profile .languge div p {
-    width:
-}
 
-.container .profile .languge div span {
-    margin-bottom: 34px;
+.container .card .profile .content .dev .languge div span {
+    margin-bottom: 32px;
+    overflow: hidden;
     display: block;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 100%;
     height: 18px;
-    background: rgb(40, 46, 32);
+    background: rgb(59, 59, 59);
 }
 
-.container .profile .languge div span div {
+.container .card .profile .content .dev .languge div span div {
+    text-align: right;
     width: 0%;
     height: 100%;
-    background: #020855;
+    background: red;
     
 }
 
-.container .profile .languge div span div span {
-    background: #020855;
-    margin-left: 0%;
+.container .card .profile .content .dev .languge div span div span {
+    background: red;
+    margin-left: 0;
     height: 100%;
-    /* color: #ff0101; */
     font-weight: 1000;
+}
+
+.container .card .profile .content .skils .links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.container .card .profile .content .skils .links i {
+    color: #dddddd;
+    font-size: 1.2rem;
+}
+
+.container .card .profile .content .skils .links i a {
+    font-size: 1.2rem;
+    color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container .card .profile .content .skils .links i  a:hover {
+    color: #fff;
 }
